@@ -1,0 +1,16 @@
+[Unit]
+Description=WebP to JPG Converter Service
+After=network.target
+
+[Service]
+Type=simple
+User=ovc
+WorkingDirectory=/home/ovc/RustroverProjects/webp2jpg
+ExecStart=/home/ovc/RustroverProjects/webp2jpg/target/release/webp2jpg
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
