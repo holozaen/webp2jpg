@@ -6,6 +6,8 @@ After=network.target
 Type=simple
 User=ovc
 WorkingDirectory=/home/ovc/RustroverProjects/webp2jpg
+Environment="WEBP2JPG_WATCH_DIR=/home/ovc/Bilder/_Speakers"
+Environment="WEBP2JPG_CROP=true"
 ExecStart=/home/ovc/RustroverProjects/webp2jpg/target/release/webp2jpg
 Restart=on-failure
 RestartSec=10
